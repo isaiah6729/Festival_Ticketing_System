@@ -25,8 +25,6 @@ public class ProfileWorkshopPage extends AppCompatActivity {
 
     SalsaDataBase dataBase;
 
-    int incrementNumber = 1;
-    int incrementNumber2 = 2;
     String username2 ;
     String password2 ;
     int userid;
@@ -69,14 +67,6 @@ public class ProfileWorkshopPage extends AppCompatActivity {
      *
      */
     private void getWorkshops() {
-
-     /*   /**
-         * get the database info *
-        Cursor cursor = dataBase.readLogIn2(username2, password2);
-        while (cursor.moveToNext()) {
-            userid = Integer.parseInt(cursor.getString(0));
-        }
-        cursor.close(); */
 
         /** get assigned workshops */
         Cursor cursor2 = dataBase.readAssignedWorkshops(userID);
@@ -132,8 +122,7 @@ public class ProfileWorkshopPage extends AppCompatActivity {
         LL2.addView(buttonincrementNumber);
 
         workshopTally = workshopTally + 1;
-        incrementNumber = incrementNumber + 1;
-        incrementNumber2 = incrementNumber2 + 1;
+   
             }
             cursor3.close();
         }
